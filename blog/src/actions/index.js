@@ -10,7 +10,7 @@ export const fetchPosts = () => {
   };
 };
 
-export const fetchUsers = (id) => {
+export const fetchUser = (id) => {
   return async (dispatch) => {
     const response = await jsonPlaceholder.get(`/users/${id}`);
 
