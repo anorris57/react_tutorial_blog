@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchPosts } from '../actions';
+import { fetchPostsAndUsers } from '../actions';
 import UserHeader from './UserHeader';
 //use life cycle method componentDidMount to make call to api
 export class PostList extends Component {
   componentDidMount() {
-    this.props.fetchPosts();
+    this.props.fetchPostsAndUsers();
   }
 
   renderList() {
@@ -37,4 +37,4 @@ const mapStateToProps = (state) => {
   return { posts: state.posts };
 }
 
-export default connect (mapStateToProps, {fetchPosts: fetchPosts})(PostList);
+export default connect (mapStateToProps, {fetchPostsAndUsers: fetchPostsAndUsers})(PostList);
